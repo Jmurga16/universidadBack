@@ -26,6 +26,7 @@ namespace universidad_Back
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -39,6 +40,13 @@ namespace universidad_Back
         {
             if (env.IsDevelopment())
             {
+                app.UseCors(options =>
+                {
+                    options.WithOrigins("http://localhost:4200");
+                    options.AllowAnyMethod();
+                    options.AllowAnyHeader();
+                });
+
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "universidad_Back v1"));
