@@ -17,8 +17,6 @@ namespace universidad_Back.Controllers
         private readonly UniversidadBusiness objUniversidad = new UniversidadBusiness();
         List<UniversidadEntity> lstUniversidad = new List<UniversidadEntity>();
 
-        string strZona = "";
-
         //Obtener uno para editar
         [Route("{CODALU}")]
         [HttpGet]
@@ -31,7 +29,7 @@ namespace universidad_Back.Controllers
             }
             catch (Exception e)
             {
-                
+                Console.WriteLine(e);
                 throw;
             }
             return lstUniversidad;

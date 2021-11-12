@@ -42,7 +42,7 @@ namespace universidad_Back
             {
                 app.UseCors(options =>
                 {
-                    options.WithOrigins("https://universidad-app.azurewebsites.net/");
+                    options.WithOrigins("http://universidad-app.azurewebsites.net");
                     options.AllowAnyMethod();
                     options.AllowAnyHeader();
                 });
