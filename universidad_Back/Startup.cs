@@ -42,7 +42,7 @@ namespace universidad_Back
             {
                 app.UseCors(options =>
                 {
-                    options.WithOrigins("http://universidad-app.azurewebsites.net");
+                    options.WithOrigins("localhost:4200");
                     options.AllowAnyMethod();
                     options.AllowAnyHeader();
                 });
@@ -51,6 +51,16 @@ namespace universidad_Back
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "universidad_Back v1"));
             }
+            else
+            {
+                app.UseCors(options =>
+                {
+                    options.WithOrigins("https://universidad-app.azurewebsites.net");
+                    options.AllowAnyMethod();
+                    options.AllowAnyHeader();
+                });
+            }
+                       
 
             app.UseHttpsRedirection();
 
