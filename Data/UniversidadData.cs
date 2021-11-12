@@ -65,6 +65,7 @@ namespace Data
                     alumnoEnt.CODCUR = reader["CODCUR"].ToString();
                     alumnoEnt.NOMCUR = reader["NOMCUR"].ToString();
                     alumnoEnt.NOTA = Convert.ToInt32(reader["NOTA"]);
+                    alumnoEnt.CREDITO = Convert.ToInt32(reader["CREDITO"]);
 
                     lstAlumnos.Add(alumnoEnt);
                 }

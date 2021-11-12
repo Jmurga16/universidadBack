@@ -10,6 +10,7 @@ namespace Entity
         public string CODCUR { get; set; }
         public string NOMCUR { get; set; }
         public int NOTA { get; set; }
+        public int CREDITO { get; set; }
 
     }
     public class AlumnosEntity
