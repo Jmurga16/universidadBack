@@ -55,7 +55,7 @@ namespace universidad_Back
             {
                 app.UseCors(options =>
                 {
-                    options.WithOrigins("https://universidad-app.azurewebsites.net", "https://univabqc.azurewebsites.net");
+                    options.WithOrigins("https://universidad-app.azurewebsites.net", "https://universidad-app.azurewebsites.net");
                     options.AllowAnyMethod();
                     options.AllowAnyHeader();
                 });
